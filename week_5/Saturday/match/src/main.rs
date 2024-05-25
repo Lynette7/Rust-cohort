@@ -1,4 +1,4 @@
-// create a traffic light solution which can be in 1 of 3 states i.e red, orenage or green. Use match to print: green - go, orange - get ready to go, red - don't go
+// create a traffic light solution which can be in 1 of 3 states i.e red, orange or green. Use match to print: green - go, orange - get ready to go, red - don't go
 
 fn main() {
     let morning = Status::Red;
