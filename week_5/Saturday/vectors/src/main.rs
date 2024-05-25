@@ -2,7 +2,7 @@
 
 fn main() {
     let vectors = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    let mut i = 0; //u
+    let mut i = 0; //used with while
 
         //using for loop
     // for i in 0..vectors.len() {
