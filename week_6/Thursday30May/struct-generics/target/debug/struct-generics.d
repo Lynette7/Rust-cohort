@@ -1,0 +1,1 @@
+/Users/lynettemwangi/Developer/Rust-cohort/week_6/Thursday30May/struct-generics/target/debug/struct-generics: /Users/lynettemwangi/Developer/Rust-cohort/week_6/Thursday30May/struct-generics/src/main.rs
