@@ -26,4 +26,28 @@ fn main() {
     let my_new_one = Point::new(3.5, 4.7);
     println!("X is at position {}", my_new_one.get_x());
     println!("Y is at position {}", my_new_one.get_y());
+
+    let direction = Compass::new(8.8, "south west");
+    println!("N is at position {}", direction.get_n());
+    println!("S is at position {}", direction.get_s());
+}
+
+// How to implement struct generics so that you can have different types for different attributes
+struct Compass<T, D> {
+    n: T,
+    s: D
+}
+
+impl<T, D> Compass<T, D> {
+    fn new(n: T, s: D) -> Self{
+        Compass{n, s}
+    }
+
+    fn get_n(&self) ->&T {
+        &self.n
+    }
+
+    fn get_s(&self) ->&D {
+        &self.s
+    }
 }
