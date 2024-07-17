@@ -1,3 +1,5 @@
+use std::fmt::{Debug, Display};
+
 fn main() {
     let numbers = [12, 30, 4, 59, 23];
     let result = largest_integer(&numbers);
@@ -12,6 +14,15 @@ fn main() {
 
     let two = largest(&characters);
     println!("Generic largest character is: {}", two);
+
+    let number: i32 = 33;
+    let text_str: &str = "Hello world!";
+
+    print_debug(number);
+    print_debug(text_str);
+
+    print_display(number);
+    print_display(text_str);
 }
 
 fn largest_integer (list: &[i32]) -> i32 {
@@ -44,4 +55,14 @@ fn largest<T: PartialOrd + Copy> (list: &[T]) -> T {
         }
     }
     largest
+}
+
+// Display trait is primarily used to display data
+// Debug trait uses {:?} instead of {} when printing
+fn print_debug<T: Debug> (item: T) {
+    println!("{:?}", item);
+}
+
+fn print_display<T: Display> (item: T) {
+    println!("{}", item)
 }
